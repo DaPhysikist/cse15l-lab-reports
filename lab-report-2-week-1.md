@@ -20,8 +20,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 > Note: Password reset can take anywhere from fifteen minutes to an hour to even longer. If you are having issues, contact support.
 
 6. Once your password has been reset, you are ready to move on to the next step.
-
-
+---
 ## Step Two: Downloading Visual Studio Code
 1. Visit this website to download Visual Studio Code: [Install Visual Studio](https://code.visualstudio.com/)
 
@@ -34,8 +33,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 ![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/vscodeopen.jpg)
 
 4. You are now ready to move on to the next step!
-
-
+---
 ## Step Three: Remotely Connecting to the Server
 1. At the top of your Visual Studio window, you should see a *Terminal* tab. Click on it and then click *New Terminal* to open a terminal window at the bottom. Resize the window by dragging it up so that it is easier to view commands.
 
@@ -57,8 +55,7 @@ ssh cs15lfa22xx@ieng6.ucsd.edu
 7. You can now enter commands and are ready to move on to the next step!
 
 > Note: Use CTRL + D (CMD + D on Mac) or type `exit` into the prompt and hit enter in order to exit out of ssh and return to your local machine's filesystem.
-
-
+---
 ## Step Four: Running Commands
 Try running some commands both on the remote computer (after sshing) and on your local computer. Here is a list of some useful commands:
 
@@ -75,18 +72,43 @@ Try running some commands both on the remote computer (after sshing) and on your
 * `cp` *``fullfilepath``* *``destinationpath``* : copies a file to a specified destination path
 * `pwd` : prints out full path of current directory
 * `ifconfig` (`ipconfig` on Windows) : prints out network information of machine
+* `scp` *``filepath``* *``destinationhostaddress:destinationfilepath``* : copies a file from a local host computer to a remote host computer
 
 > Note: You can run a command by typing in the command name (ex. cd) and the command parameters (ex: C:/), and then pressing enter.
 
 Here is an example:
+
 ![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/commands.jpg)
 
-
+---
 ## Step Five: Moving Files with `scp`
-1. Create a file using Visual Studio Code named WhereAmI.java
+1. Create a file using Visual Studio Code named `WhereAmI.java`.
+2. Copy and paste the following code into it:
+```
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
+3. Exit out of ssh and use the command `javac WhereAmI.java` in the terminal to compile the file. Then use the command `java WhereAmI` to run the file, which should display system, user and directory information.
 
+> Note: You need java installed on your local machine to complete this step. Get Java here: [Java JDK Download](https://www.oracle.com/java/technologies/downloads/)
 
-## Setting an SSH Key
+4. Next, use the command `scp WhereAmI.java cs15lfa22xx@ieng6.ucsd.edu:~/` in the terminal, replacing xx with the two unqiue characters from your username. Enter your password when prompted. This command will copy the java file you just created over to the ieng6 server.
 
+5. After sshing into the remote server, use the commands `javac WhereAmI.java` and `java WhereAmI` again and notice that there are different results this time.
 
-## Optimizing Remote Running
+6. You are now ready to move on to the next step.
+---
+## Step Six: Setting an SSH Key
+
+An SSH Key will remove the need for you to enter a password every time you ssh into ieng6 or use scp, making both processes quicker and smoother. The following steps outline how to set one up:
+
+1. 
+
+---
+## Step Seven: Optimizing Remote Running
