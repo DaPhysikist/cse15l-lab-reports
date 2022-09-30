@@ -7,13 +7,13 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 
 2. Go down to where it says *Forgot Password or New Student* and enter your last name in the *Last Name* box and your Student ID in the *Student ID* box and click submit.
 
-![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/accessingreset.png)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/accessingreset.jpg)
 
 3. You will be redirected to a page where you will be able to see your cse15l account username. It will look like this: `cs15lfa22xx`, with xx representing the two characters of your username that are unique. Remember this username, as you will be using it to ssh into the machine later.
 
 4. Next, click on the username and you will see a page that offers you a link to change your password. Click on that link.
 
-![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/resetpassword.png)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/resetpassword.jpg)
 
 5. Enter your username and Student ID and click submit. Then enter your current password (should be your AD password), enter a new password you want to use, make sure the option to change MyTritonLink password says no and click change my password.
 
@@ -30,7 +30,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 
 3. Once it has finished installing, launch Visual Studio Code on your machine. Below is what your Visual Studio Code window might look like (there might be differences based on your system and your appearance preferences).
 
-![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/vscodeopen.png)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/vscodeopen.jpg)
 
 4. You are now ready to move on to the next step!
 
@@ -50,8 +50,15 @@ ssh cs15lfa22xx@ieng6.ucsd.edu
 
 6. You will see a bunch of information come up as seen in the image below and then a prompt will appear.
 
-![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/sshsuccess.png)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/sshsuccess.jpg)
 
 7. You can now enter commands and are ready to move on to the next step!
 
+> Note: Type `exit` into the prompt and hit enter in order to exit out of ssh and return to your local machine's filesystem.
+
 ## Step Four: Running Commands
+Try running some commands both on the remote computer (after sshing) and on your local computer. Here is a list of some useful commands:
+
+* `cd ~` : takes you to your home directory on Linux machines including the ieng6 remote machine
+
+> Note: You can run a command by typing in the command name (ex. cd) and the command parameters (ex: C:/), and then pressing enter.
