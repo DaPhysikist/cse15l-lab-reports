@@ -110,9 +110,35 @@ class WhereAmI {
 ---
 ## Step Six: Setting an SSH Key
 
-An SSH Key will remove the need for you to enter a password every time you ssh into ieng6 or use scp, making both processes quicker and smoother. The following steps outline how to set one up:
+An SSH Key will remove the need for you to enter a password every time you ssh into ieng6 or use scp, making both processes quicker and smoother. The following steps outline how to set one up (if your machine does not use Windows skip steps 3-6):
 
-1. 
+1. Make sure you are logged out of ssh and are in your local machine's filesystem. If you are using Windows, switch to using Powershell as an administrator instead of the terminal from Visual Studio Code. Next, enter the command `ssh-keygen`, which creates a pair of files on your local machine called the **public key** and **private key**.
+
+2. Hit enter when the terminal prompts you to enter a file to save the key in and then enter your SSH password when the terminal prompts you to enter your passphrase. The terminal will tell you the path where your SSH public key was stored. Take note of this path.
+
+3. Run the command `Get-Service ssh-agent | Set-Service -StartupType Automatic`.
+
+4. Run the command `Start-Service ssh-agent`.
+
+5. Run the command `Get-Service ssh-agent`.
+
+6. Run the command `ssh-add $env:USERPROFILE\.ssh\id_rsa`.
+
+7. SSH into the ieng6 server. Use the `mkdir .ssh` command to make a directory to store your ssh public key in on the server. Exit ssh and use the command `scp` *``publickeypath``* `cs15lfa22xx@ieng6.ucsd.edu:~/.ssh/authorized_keys` to copy the public key over to the ieng6 server, replacing xx with the unique two characters from your username and *publickeypath* with the path the terminal told you of before.
+
+8. You should now be able to ssh and scp from your local machine into ieng6 without needing a password.
+
+Example:
+
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/sshkeypart1.jpg)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/sshkeypart2.jpg)
 
 ---
-## Step Seven: Optimizing Remote Running
+## Step Seven: Optimizing Remote Running (Windows Version)
+In order to optimize remote running, we want to limit the process of copying saved changes to a file made locally to the remote server and running it with under 10 keystrokes/mouseclicks. The process below outlines a way to achieve this ideal:
+
+1. Open notepad.
+2. Copy paste the command `ssh cs15lfa22xx@ieng6.ucsd.edu cp WhereAmI.java OtherMain.java; javac OtherMain.java; javac WhereAmI.java; java WhereAmI` onto the first line, substituting **xx** for the unique two characters in your username. Type `PAUSE` on the second line.
+3. Click *File*, *Save As*, and save the file as `bf.bat` (bf is shortform for batch file haha) in the same directory that your java file is stored in on your local machine.
+4. Go to the terminal in Visual Studio Code and run the command `.\bf`. Everything should work correctly assuming you already setup SSH keys on the machine.
+5. Congrats! With just one mouseclick and five keystrokes including the enter key, this is a super optimized way to save and run your code on the ieng6 server remotely.
