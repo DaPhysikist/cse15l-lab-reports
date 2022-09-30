@@ -3,7 +3,7 @@
 Do you want to figure out how to log into your account on ieng6 easily? This is a tutorial to get you started.
 
 ## Step One: Setting Up Your CSE15L Account
-1. Visit this website: https://sdacs.ucsd.edu/~icc/index.php
+1. Visit this website: [Setup Account](https://sdacs.ucsd.edu/~icc/index.php)
 
 2. Go down to where it says *Forgot Password or New Student* and enter your last name in the *Last Name* box and your Student ID in the *Student ID* box and click submit.
 
@@ -23,7 +23,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 
 
 ## Step Two: Downloading Visual Studio Code
-1. Visit this website to download Visual Studio Code: https://code.visualstudio.com/
+1. Visit this website to download Visual Studio Code: [Install Visual Studio](https://code.visualstudio.com/)
 
 >Note: Visual Studio Code can only be installed on computers running Windows, Linux or OSX (Macs). If you are currently using a device that does not run on one of these operating systems, like a Chromebook or a tablet, you will need to switch to a device using one of these operating systems to continue.
 
@@ -83,3 +83,10 @@ Here is an example:
 
 
 ## Step Five: Moving Files with `scp`
+1. Create a file using Visual Studio Code named WhereAmI.java
+
+
+## Setting an SSH Key
+
+
+## Optimizing Remote Running
