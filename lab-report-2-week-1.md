@@ -142,3 +142,7 @@ In order to optimize remote running, we want to limit the process of copying sav
 3. Click *File*, *Save As*, and save the file as `bf.bat` (bf is shortform for batch file haha) in the same directory that your java file is stored in on your local machine.
 4. Go to the terminal in Visual Studio Code and run the command `.\bf`. Everything should work correctly assuming you already setup SSH keys on the machine.
 5. Congrats! With just one mouseclick and five keystrokes including the enter key, this is a super optimized way to save and run your code on the ieng6 server remotely.
+
+Example:
+
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/optimization.jpg)
