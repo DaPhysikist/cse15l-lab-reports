@@ -15,11 +15,12 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 
 ![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/resetpassword.jpg)
 
-5. Enter your username and Student ID and click submit. Then enter your current password (should be your AD password), enter a new password you want to use, make sure the option to change MyTritonLink password says no and click change my password.
+5. Enter your username and Student ID and click submit. Then enter your current password (should be your AD password), enter a new password you want to use, **make sure the option to change MyTritonLink password is selected as *no*** and click change my password.
 
 > Note: Password reset can take anywhere from fifteen minutes to an hour to even longer. If you are having issues, contact support.
 
 6. Once your password has been reset, you are ready to move on to the next step.
+
 
 ## Step Two: Downloading Visual Studio Code
 1. Visit this website to download Visual Studio Code: https://code.visualstudio.com/
@@ -33,6 +34,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 ![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/vscodeopen.jpg)
 
 4. You are now ready to move on to the next step!
+
 
 ## Step Three: Remotely Connecting to the Server
 1. At the top of your Visual Studio window, you should see a *Terminal* tab. Click on it and then click *New Terminal* to open a terminal window at the bottom. Resize the window by dragging it up so that it is easier to view commands.
@@ -54,11 +56,30 @@ ssh cs15lfa22xx@ieng6.ucsd.edu
 
 7. You can now enter commands and are ready to move on to the next step!
 
-> Note: Type `exit` into the prompt and hit enter in order to exit out of ssh and return to your local machine's filesystem.
+> Note: Use CTRL + D (CMD + D on Mac) or type `exit` into the prompt and hit enter in order to exit out of ssh and return to your local machine's filesystem.
+
 
 ## Step Four: Running Commands
 Try running some commands both on the remote computer (after sshing) and on your local computer. Here is a list of some useful commands:
 
-* `cd ~` : takes you to your home directory on Linux machines including the ieng6 remote machine
+* `cd ~` : switches to to your home directory on Linux machines including the ieng6 remote machine
+* `cd /` : switches to the root directory
+* `cd ..` : switches to the parent directory of the current directory
+* `cd` *``childdirectoryname``* : switches to a child directory of the current directory
+* `cd` *``fulldirectorypath``* : switches to any directory based on the specified path
+* `ls` : lists all the files and subdirectories in the current directory except those starting with .
+* `ls` *``fulldirectorypath``* : lists all the files and subdirectories in the directory of the specified path except those starting with .
+* `ls -a` : lists all the files and subdirectories in the current directory including those starting with .
+* `ls -lat` : lists all the files and subdirectories in the current directory including those starting with . in a long listing format sorted by modification time - includes file/subdirectory permissions
+* `cat` *``fullfilepath``* : prints out the contents of the specified file
+* `cp` *``fullfilepath``* *``destinationpath``* : copies a file to a specified destination path
+* `pwd` : prints out full path of current directory
+* `ifconfig` (`ipconfig` on Windows) : prints out network information of machine
 
 > Note: You can run a command by typing in the command name (ex. cd) and the command parameters (ex: C:/), and then pressing enter.
+
+Here is an example:
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/commands.jpg)
+
+
+## Step Five: Moving Files with `scp`
