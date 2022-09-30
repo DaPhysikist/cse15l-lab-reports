@@ -1,1 +1,1 @@
-![Image](https://daphysikist.github.io/cse15l-lab-reports/screenshot.png)
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-0-lab/screenshot.png)
