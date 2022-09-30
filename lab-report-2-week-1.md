@@ -107,6 +107,10 @@ class WhereAmI {
 
 6. You are now ready to move on to the next step.
 
+Example:
+
+![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/scp.jpg)
+
 ---
 ## Step Six: Setting an SSH Key
 
