@@ -142,7 +142,14 @@ Example:
 In order to optimize remote running, we want to limit the process of copying saved changes to a file made locally to the remote server and running it with under 10 keystrokes/mouseclicks. The process below outlines a way to achieve this ideal:
 
 1. Open notepad.
-2. Copy paste the command `ssh cs15lfa22xx@ieng6.ucsd.edu cp WhereAmI.java OtherMain.java; javac OtherMain.java; javac WhereAmI.java; java WhereAmI` onto the first line, substituting **xx** for the unique two characters in your username. Type `PAUSE` on the second line.
+2. Copy paste the following lines of commands into the file, substituting **xx** for the unique two characters in your username:
+
+```
+scp WhereAmI.java cs15lfa22xx@ieng6.ucsd.edu:~/
+ssh cs15lfa22xx@ieng6.ucsd.edu javac WhereAmI.java; java WhereAmI
+PAUSE
+```
+
 3. Click *File*, *Save As*, and save the file as `bf.bat` (bf is shortform for batch file haha) in the same directory that your java file is stored in on your local machine.
 4. Go to the terminal in Visual Studio Code and run the command `.\bf`. Everything should work correctly assuming you already setup SSH keys on the machine.
 5. Congrats! With just one mouseclick and five keystrokes including the enter key, this is a super optimized way to save and run your code on the ieng6 server remotely.
