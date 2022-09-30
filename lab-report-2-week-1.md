@@ -20,6 +20,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 > Note: Password reset can take anywhere from fifteen minutes to an hour to even longer. If you are having issues, contact support.
 
 6. Once your password has been reset, you are ready to move on to the next step.
+
 ---
 ## Step Two: Downloading Visual Studio Code
 1. Visit this website to download Visual Studio Code: [Install Visual Studio](https://code.visualstudio.com/)
@@ -33,6 +34,7 @@ Do you want to figure out how to log into your account on ieng6 easily? This is 
 ![Image](https://daphysikist.github.io/cse15l-lab-reports/week-1-lab/vscodeopen.jpg)
 
 4. You are now ready to move on to the next step!
+
 ---
 ## Step Three: Remotely Connecting to the Server
 1. At the top of your Visual Studio window, you should see a *Terminal* tab. Click on it and then click *New Terminal* to open a terminal window at the bottom. Resize the window by dragging it up so that it is easier to view commands.
@@ -55,6 +57,7 @@ ssh cs15lfa22xx@ieng6.ucsd.edu
 7. You can now enter commands and are ready to move on to the next step!
 
 > Note: Use CTRL + D (CMD + D on Mac) or type `exit` into the prompt and hit enter in order to exit out of ssh and return to your local machine's filesystem.
+
 ---
 ## Step Four: Running Commands
 Try running some commands both on the remote computer (after sshing) and on your local computer. Here is a list of some useful commands:
@@ -103,6 +106,7 @@ class WhereAmI {
 5. After sshing into the remote server, use the commands `javac WhereAmI.java` and `java WhereAmI` again and notice that there are different results this time.
 
 6. You are now ready to move on to the next step.
+
 ---
 ## Step Six: Setting an SSH Key
 
