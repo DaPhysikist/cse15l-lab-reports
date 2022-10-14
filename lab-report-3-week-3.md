@@ -91,7 +91,7 @@ class SearchEngine  {
 
 ### Search Engine 404 Error:
 
-***404 ![Image](/week-3-lab/server404.jpg) File Not Found***
+***404 ![Image](/week-3-lab/server404.jpg) File Not Found ;)***
 
 ---
 
