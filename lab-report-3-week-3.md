@@ -63,9 +63,9 @@ class SearchEngine  {
 
 ![Image](/week-3-lab/serveraccessurl.jpg)
 
-* hehe
-* 
-* 
+* The `handleRequest` method of the Handler class gets called and specifically, the first *if block* gets executed, printing the list of strings stored on the server.
+*  The `listOfStrings` field in the Handler class stores all of the strings added to the server. Currently, it is empty since no strings have been added, so it returns an empty array. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. Currently, there is no value in the search bar after the port number, which means that `getPath()` returns the root directory, denoted by `/`. 
+* Neither of the values change by the time the request is done processing.
 
 </br>
 
@@ -73,9 +73,9 @@ class SearchEngine  {
 
 ![Image](/week-3-lab/serveraddurl.jpg)
 
-* hehe
-* 
-* 
+* The `handleRequest` method of the Handler class gets called and specifically, the *if block* inside the *else block* gets executed, adding a string to the list of strings stored on the server.
+* The `listOfStrings` field in the Handler class stores all of the strings added to the server. Before the method executes, it is empty since no strings have been added, so it would return an empty array. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. The value `add?s="hello"` appears in the search bar after the port number, which means that `getPath()` returns `add?s="hello"` in string form.
+* The `listOfStrings` field in the Handler class changes to contain the string **hello** by the time the request is done processing.
 
 </br>
 
@@ -83,9 +83,9 @@ class SearchEngine  {
 
 ![Image](/week-3-lab/serverqueryurl.jpg)
 
-* hehe
-* 
-* 
+* The `handleRequest` method of the Handler class gets called and specifically, the *else if block* inside the *else block* gets executed, searching for a string in the list of strings stored on the server.
+*  The `listOfStrings` field in the Handler class stores all of the strings added to the server. Currently, it contains one string element, **"hello"**. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. The value `search?s=h` appears in the search bar after the port number, which means that `getPath()` returns `search?s=h"` in string form.
+* Neither the field or the method argument change by the time the request is done processing. However, there is an ArrayList that gets constructed inside the method when the query is called, which is filled with all the elements from the list of strings that match the query, and then printed out to display the query results.
 
 </br>
 
