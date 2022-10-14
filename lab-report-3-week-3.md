@@ -57,7 +57,7 @@ class SearchEngine  {
     }
 }
 ```
-</br>
+
 
 ### Search Engine Homepage:
 
@@ -67,7 +67,7 @@ class SearchEngine  {
 *  The `listOfStrings` field in the Handler class stores all of the strings added to the server. Currently, it is empty since no strings have been added, so it returns an empty array. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. Currently, there is no value in the search bar after the port number, which means that `getPath()` returns the root directory, denoted by `/`. 
 * Neither of the values change by the time the request is done processing.
 
-</br>
+
 
 ### Search Engine Add:
 
@@ -77,7 +77,7 @@ class SearchEngine  {
 * The `listOfStrings` field in the Handler class stores all of the strings added to the server. Before the method executes, it is empty since no strings have been added, so it would return an empty array. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. The value `add?s="hello"` appears in the search bar after the port number, which means that `getPath()` returns `add?s="hello"` in string form.
 * The `listOfStrings` field in the Handler class changes to contain the string **hello** by the time the request is done processing.
 
-</br>
+
 
 ### Search Engine Query:
 
@@ -87,7 +87,7 @@ class SearchEngine  {
 *  The `listOfStrings` field in the Handler class stores all of the strings added to the server. Currently, it contains one string element, **"hello"**. The `handleRequest` method takes the uniform resource identifier in the search bar as an input, which is the value that comes after the domain and port number. The value `search?s=h` appears in the search bar after the port number, which means that `getPath()` returns `search?s=h"` in string form.
 * Neither the field or the method argument change by the time the request is done processing. However, there is an ArrayList that gets constructed inside the method when the query is called, which is filled with all the elements from the list of strings that match the query, and then printed out to display the query results.
 
-</br>
+
 
 ### Search Engine 404 Error:
 
@@ -95,7 +95,7 @@ class SearchEngine  {
 
 ---
 
-</br>
+
 
 ## Part 2
 
@@ -116,8 +116,7 @@ class SearchEngine  {
 
 ##### For reversed, I used the value of  **{8, 9, 10, 11, 12, 13, 14}** to test the method. The expected value was **{14, 13, 12, 11, 10, 9, 8}**. The symptom was that *<14>* was expected but *<0>* was found instead. This is because the code set the values of the old array to the values in the new array, when it should have been setting the values in the new array to the values in the old array. Due to this, all the values in the old array were overwritten to 0. In addition, the new array should have been returned, but the old array was returned instead, which meant that an array with all the values overwritten  to 0 was returned when an array with the values properly reversed should have been returned. The code change needed to be made for this is to change `arr[i] = newArray[arr.length - i - 1]` to `newArray[i] = arr[arr.length - i -1]` and to change `return arr` to `return newArray`.
 
-</br>
-</br>
+
 
 
 ### Bug Two Buggy Code:
