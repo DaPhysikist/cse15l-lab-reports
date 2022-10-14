@@ -127,7 +127,7 @@ class SearchEngine  {
 
 ![Image](/week-3-lab/listtestsfilterinput.jpg)
 
- ### Bug Two Symptoms:
+### Bug Two Symptoms:
 
 ![Image](/week-3-lab/listtestsfiltersymptoms.jpg)
 
