@@ -1,0 +1,9 @@
+[submodule "week-3-lab/lab3"]
+	path = week-3-lab/lab3
+	url = https://github.com/DaPhysikist/lab3
+[submodule "week-2-lab/wavelet"]
+	path = week-2-lab/wavelet
+	url = https://github.com/DaPhysikist/wavelet
+[submodule "week-4-lab/docsearch"]
+	path = week-4-lab/docsearch
+	url = https://github.com/DaPhysikist/docsearch
