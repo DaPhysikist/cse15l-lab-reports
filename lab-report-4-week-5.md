@@ -93,6 +93,9 @@ government/Media/Law_Schools.txt:government post. Here is how to grapple "in the
 plos/pmed.0010013.txt:        easier to grapple with a difficult, but ultimately soluble, basic science question than to
 ```
 
+##### When used with the `-R` option, the `grep` command reads every file in the given directory recursively and returns the lines that contain the string given in the parameters. This can be useful for easily looking through all the files in a given directory without having to worry about the path format. In this case, the command is returning the lines that contain the word **apple** for all files within all sub-directories of the working directory. This is useful if the user wanted to know all of the files that contain the word **apple** in the working directory (including other words that have **apple** inside of them).
+<br/>
+
 ```
 $ grep -R "cheese"
 biomed/1471-2180-3-15.txt:        cheeses prepared from unpasteurized milk. Children in these
@@ -101,11 +104,17 @@ plos/journal.pbio.0020146.txt:        procedures, such as those for producing ch
 plos/journal.pbio.0020306.txt:        division. ‘The shell is rather like a Camembert cheese box or a petri dish’, explains
 ```
 
+##### In this case, the command is returning the lines that contain the word **cheese** for all files within all sub-directories of the working directory. This is useful if the user wanted to know all of the files that contain the word **cheese** in the working directory (including other words that have **cheese** inside of them).
+<br/>
+
 ```
 $ grep -R "penny"
 911report/chapter-13.3.txt:                mujahideen were financed (even "one penny") or trained by the United States. See
 plos/journal.pbio.0020150.txt:        concerned, “a penny for your thoughts” is currently more like “a million pennies for a
 ```
+
+##### In this case, the command is returning the lines that contain the word **penny** for all files within all sub-directories of the working directory. This is useful if the user wanted to know all of the files that contain the word **penny** in the working directory (including other words that have **penny** inside of them).
+<br/>
 
 ---
 
@@ -129,6 +138,9 @@ government/Media/Weak_economy.txt:Mike Miller, a Prince George's County Democrat
 government/Media/predatory_loans.txt:Linkhart, a Denver Democrat, introduced the bill at the behest
 ```
 
+##### When used with the `-i` option, the `grep` command returns the lines that contain the string given in the parameters disregarding case-sensitivity. This can be useful for looking for a particular string within a file without having to worry whether the characters are upper-case or lower-case. In this case, the command is returning the lines that contain the string **Democrat** for all files within the *government* directory regardless if the characters of **Democrat** are upper-case or not. This is useful if the user wanted to know which files in the *government* directory made references to the Democratic party or the democratic system.
+<br/>
+
 ```
 $ grep -i "crisis" plos/*.txt
 plos/journal.pbio.0020052.txt:        The AIDS crisis has brought to public notice what has always been generally true—that
@@ -138,6 +150,9 @@ plos/pmed.0010010.txt:        The Crisis of Human Resources
 plos/pmed.0010039.txt:        diseases, such as diabetes (Figure 1) [5]. And if you have a serious health crisis while
 plos/pmed.0020075.txt:        CML that has progressed to blast crisis [2].
 ```
+
+##### In this case, the command is returning the lines that contain the string **crisis** for all files within the *plos* directory regardless if the characters of **crisis** are upper-case or not. This is useful if the user wanted to know which files in the *plos* directory made references to a crisis, multiple crises, or a proper noun crisis.
+<br/>
 
 ```
 $ grep -i "peace" 911report/*.txt
@@ -164,3 +179,8 @@ $ grep -i "peace" 911report/*.txt
 911report/chapter-6.txt:                peace process, Russia, and the Persian Gulf ).174 But Rice and Hadley began to
 911report/chapter-6.txt:                They included the collapse of the Middle East peace process and, in April, a crisis
 ```
+
+##### In this case, the command is returning the lines that contain the string **peace** for all files within the *911report* directory regardless if the characters of **peace** are upper-case or not. This is useful if the user wanted to know which files in the *911report* directory made references to peace, or a proper noun with **peace** in it.
+<br/>
+
+---
