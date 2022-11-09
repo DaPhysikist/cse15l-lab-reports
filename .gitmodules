@@ -10,3 +10,6 @@
 [submodule "bash-for-quiz"]
 	path = bash-for-quiz
 	url = https://github.com/DaPhysikist/bash-for-quiz/
+[submodule "week-7-lab/list-examples-grader"]
+	path = week-7-lab/list-examples-grader
+	url = https://github.com/DaPhysikist/list-examples-grader
