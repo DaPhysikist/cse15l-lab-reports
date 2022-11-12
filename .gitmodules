@@ -13,3 +13,6 @@
 [submodule "week-7-lab/list-examples-grader"]
 	path = week-7-lab/list-examples-grader
 	url = https://github.com/DaPhysikist/list-examples-grader
+[submodule "week-6-lab/week6-skill-demo1"]
+	path = week-6-lab/week6-skill-demo1
+	url = https://github.com/ucsd-cse15l-f22/skill-demo1
