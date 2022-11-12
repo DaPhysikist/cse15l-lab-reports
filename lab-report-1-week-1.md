@@ -1,4 +1,4 @@
-# Week One Lab Report
+# Lab Report One
 
 Do you want to figure out how to log into your account on ieng6 easily? This is a tutorial to get you started.
 
