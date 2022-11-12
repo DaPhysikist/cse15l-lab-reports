@@ -31,6 +31,6 @@ Here is each step of the process:<br/>
 
 ## Part Two
 
-It took seconds to edit the file using the first style and 28 seconds to edit the file using the second style. </br>
+It took 22 seconds to edit the file using the first style and 28 seconds to edit the file using the second style. </br>
 * I would prefer to use the style where I use vim to edit the program directly on the remote machine, as it is more convenient since I do not have to worry about constantly switching back to the local machine, editing the file and scping it again if the program fails to work properly the first time.
 * If the project involves a program that I can run on my local machine, I might prefer to use the first style, since it will be easier to write code and do tests using a traditional keyboard mouse editing setup, especially since I am more familiar with Windows. However, if the program is dependent on the remote machine to run (for example it uses bash and linux commands), then it will be much more convenient to do the editing on the remote machine and then simply run it after the editing is completed.
