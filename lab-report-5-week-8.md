@@ -97,9 +97,9 @@ Example 2 Script Trace:
     * stdout: <br/>
     JUnit version 4.13.2 <br/>
     .. <br/>
-    Time: 0.015 <br/></br>
-    OK (2 tests) </br>
-    
+    Time: 0.015 <br/><br/>
+    OK (2 tests) <br/>
+
     * return code: 0
 * if statement on line 26 --> condition evaluates to false since there is no error for running testFilter
 * lines 27-29 do not run
